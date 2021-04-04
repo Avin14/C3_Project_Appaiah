@@ -83,6 +83,26 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //<<<<<<<<<<<<<<<<<<<<<<<COST>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void when_no_menu_item_passed_the_total_order_cost_should_be_zero(){
+
+        assertEquals(0, selectedMenuItems.size());
+        assertEquals(0, restaurant.computeTotalOrderCost(selectedMenuItems));
+
+    }
+
+    @Test
+    public void when_2_menu_item_passed_the_total_order_cost_should_be_388(){
+
+        selectedMenuItems.add("Sweet corn soup");
+        selectedMenuItems.add("Vegetable lasagne");
+
+        assertEquals(2, selectedMenuItems.size());
+        assertEquals(388, restaurant.computeTotalOrderCost(selectedMenuItems));
+
+    }
 
 
 }
