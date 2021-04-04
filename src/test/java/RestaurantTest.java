@@ -102,7 +102,7 @@ class RestaurantTest {
         assertEquals(2, selectedMenuItems.size());
         assertEquals(388, restaurant.computeTotalOrderCost(selectedMenuItems));
 
-    }
+    }   
 
 
 }
